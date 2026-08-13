@@ -121,6 +121,10 @@ export default class Inventory {
         return this.equipment.getItem(this.size() + slot);
     }
 
+    getEquippedItems() {
+        return this.equipment.getWornItems();
+    }
+
     removeItem(position: number, size: number) {
         const item = this.getItem(position);
 
